@@ -1,0 +1,566 @@
+/* ------------------------------
+    RESET E BASE
+--------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  line-height: 1.6;
+  color: #555555;
+  background: #f5f5f5;
+  scroll-behavior: smooth;
+}
+
+/* Cores */
+:root {
+  --verde: #8ED1C6;
+  --azul: #A8D8F0;
+  --pessego: #F7C9B6;
+  --cinza: #555555;
+
+  --shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Layout geral */
+main {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+section {
+  padding: 80px 8%;
+}
+
+h1, h2, h3 {
+  color: var(--cinza);
+  font-weight: 700;
+}
+
+/* ------------------------------
+    HEADER / NAV
+--------------------------------*/
+header {
+  width: 100%;
+  background: var(--verde);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .nav {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 8%;
+}
+
+header nav a {
+  margin-left: 28px;
+  text-decoration: none;
+  color: #555555;
+  font-weight: 600;
+  transition: .2s;
+}
+
+header nav a:hover {
+  opacity: .7;
+}
+
+/* Logo */
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  background: var(--pessego);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  color: #fff;
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+.brand-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  font-family: quicksand, sans-serif;
+}
+
+.brand-subtitle {
+  font-size: 12px;
+  color: white;
+  margin-top: -2px;
+}
+
+/* ------------------------------
+    HERO / INÍCIO
+--------------------------------*/
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+#hero-title {
+  font-size: 44px;
+  margin-bottom: 16px;
+}
+
+#hero-sub {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+#cta-cadastrar {
+  background: var(--pessego);
+  padding: 14px 24px;
+  color: #757575;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  box-shadow: var(--shadow);
+  transition: 0.2s;
+}
+
+#cta-cadastrar:hover {
+  opacity: .85;
+}
+
+#banner-img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+/* ------------------------------
+    SOBRE
+--------------------------------*/
+#sobre {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+#sobre-text article {
+  margin-bottom: 28px;
+}
+
+#sobre-aside {
+  width: 45%;
+}
+
+#equipe {
+  margin-top: 40px;
+}
+
+/* Cards da equipe */
+.team-list {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  background: var(--azul);
+  padding: 16px;
+  border-radius: 14px;
+  width: 140px;
+  text-align: center;
+  color: #555555;
+  box-shadow: var(--shadow);
+}
+
+.team-member .avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--pessego);
+  color: #212121;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* ------------------------------
+    SERVIÇOS
+--------------------------------*/
+#servicos-intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#servicos-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  justify-content: center;
+}
+
+.servico-item {
+  background: var(--verde);
+  color: #212121;
+  padding: 22px;
+  width: 260px;
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: 0.2s;
+}
+
+.servico-item:hover {
+  transform: scale(1.03);
+  opacity: .9;
+}
+
+.servico-icone {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #F7C9B6;
+  padding: 28px;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: var(--shadow);
+}
+
+#modalCloseBtn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  float: right;
+  cursor: pointer;
+}
+
+.modal-ico {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+/* ------------------------------
+    CADASTRO
+--------------------------------*/
+#cadastro {
+  display: flex;
+  gap: 60px;
+}
+
+#cadastro-intro {
+  width: 40%;
+}
+
+form {
+  width: 50%;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  gap: 16px;
+}
+
+#btnSubmit,
+#btnFillExample {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  color: rgb(77, 77, 77);
+  background: var(--verde);
+  box-shadow: var(--shadow);
+}
+
+#btnFillExample {
+  background: var(--azul);
+}
+
+/* Lateral do cadastro */
+#cadastro-info {
+  width: 30%;
+  background: var(--pessego);
+  padding: 20px;
+  border-radius: 18px;
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+/* ------------------------------
+    LISTA DE PROFISSIONAIS
+--------------------------------*/
+#lista {
+  text-align: center;
+}
+
+#filters {
+  margin: 30px auto;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#filters input,
+#filters select {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+#clearFiltersBtn {
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  background: var(--pessego);
+  color: #555555;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+#listContainer {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 20px;
+}
+
+.prof-card {
+  background: var(--azul);
+  color: #212121;
+  padding: 18px;
+  border-radius: 14px;
+  text-align: left;
+  box-shadow: var(--shadow);
+}
+
+/* ------------------------------
+    RODAPÉ
+--------------------------------*/
+footer {
+  text-align: center;
+  padding: 26px;
+  background: var(--verde);
+  color: #555555;
+  margin-top: 60px;
+}
+
+/* ------------------------------
+    RESPONSIVIDADE
+--------------------------------*/
+@media (max-width: 900px) {
+  #hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  #sobre {
+    flex-direction: row;
+  }
+
+  #cadastro {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  #cadastro-intro,
+  form,
+  #cadastro-info {
+    width: 100%;
+  }
+}
+
+/* Extras que esqueci */
+.cor {
+  color: #555555;
+}
+
+.font-navigations {
+  font-family: "quicksand", sans-serif;
+}
+
+.container {
+  width: 800px;
+  margin: auto;
+}
+
+/* celular pequeno */
+@media (max-width: 480px) { }
+
+/* celular médio */
+@media (max-width: 768px) {
+    nav a {
+        font-size:12px;
+        margin: 0 8px;
+        
+    }
+ }
+
+/* tablet */
+@media (max-width: 1024px) { }
+
+/* Estilo normal - desktop */
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-icon {
+  display: none; /* escondido no PC */
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Desktop (padrão) */
+.hamburger {
+  display: none; /* escondido no desktop */
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  background: #111;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  nav.menu {
+    display: none; /* o menu normal some */
+  }
+  #cadastro-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+/* ---------------- MENU HAMBURGUER ---------------- */
+
+/* Esconde no desktop */
+.hamburger {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  user-select: none;
+  margin-left: 20px;
+}
+
+/* Estilo do menu mobile */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #565656;
+  padding: 20px;
+  position: absolute;
+  top: 80px;
+  right: 8%;
+  width: 65%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.mobile-menu a:hover {
+  opacity: 0.7;
+}
+
+/* ------- MOBILE RESPONSIVO ------- */
+@media (max-width: 768px) {
+
+  #main-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobile-menu.show {
+    display: flex;
+  }
+}
+/* --- CORREÇÃO DO CADASTRO NO MOBILE (finalmente) --- */
+@media (max-width: 900px) {
+  #cadastro {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  #cadastro-intro,
+  form,
+  #cadastro-info {
+    width: 100%;
+  }
+
+  #cadastro-info {
+    margin-top: 20px;
+    border-radius: 16px;
+  }
+}

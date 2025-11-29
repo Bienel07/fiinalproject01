@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ConnectPets — Conectando tutores e profissionais pet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="topo">
+    <div class="nav">
+      <a class="brand" href="#inicio" id="logo-link">
+        <div class="logo" id="logo-text">CP</div>
+        <div class="brand-text">
+          <div class="brand-title">ConnectPets</div>
+          <div class="brand-subtitle">Conectando tutores e profissionais</div>
+        </div>
+      </a>
+
+      <nav aria-label="Navegação principal" id="main-nav">
+        <a class="botões" href="#inicio">Início</a>
+        <a class="botões" href="#sobre">Sobre</a>
+        <a class="botões" href="#servicos">Serviços</a>
+        <a class="botões" href="#cadastro">Cadastro</a>
+        <a class="botões" href="#lista">Profissionais</a>
+      </nav>
+              <!-- Ícone hamburguer (mobile) -->
+        <div id="hamburger" class="hamburger">☰</div>
+      
+        <!-- Menu Mobile -->
+        <div id="mobileMenu" class="mobile-menu">
+          <a href="#inicio">Início</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#cadastro">Cadastro</a>
+          <a href="#lista">Profissionais</a>
+        </div>
+
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <!-- HERO / Início -->
+    <section id="hero" aria-label="Início - Apresentação">
+      <div id="hero-left">
+        <h1 id="hero-title">Conectando tutores e profissionais pet</h1>
+        <p id="hero-sub">Encontre cuidadores confiáveis para o seu animal de estimação ou cadastre-se como profissional e amplie sua visibilidade.</p>
+        <a id="cta-cadastrar" href="#cadastro">Cadastrar Profissional</a>
+      </div>
+
+      <div id="hero-right" aria-hidden="false">
+        <!-- Banner: imagem para conectar ao universo pet -->
+        <img id="banner-img" src="https://imgs.search.brave.com/oQuoisSVwUppDzvBwH4cCYADHBprdgPdMMZ0PHWiunc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNTcv/ODUyLzAwOC9zbWFs/bC9jdXRlLWRvZy1h/bmQtY2F0LWN1ZGRs/aW5nLXRvZ2V0aGVy/LW9uLWEtd2hpdGUt/YmFja2dyb3VuZC1s/b29raW5nLWZyaWVu/ZGx5LWFuZC1wbGF5/ZnVsLWZyZWUtcG5n/LnBuZw">
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" aria-label="Sobre a ConnectPets">
+      <div id="sobre-text">
+        <h2>Sobre a ConnectPets</h2>
+
+        <article id="missao">
+          <h3>Nossa Missão</h3>
+          <p>Conectar tutores de pets a profissionais de confiança, promovendo o cuidado e o bem-estar dos animais.</p>
+        </article>
+
+        <article id="visao">
+          <h3>Nossa Visão</h3>
+          <p>Ser a plataforma de referência para serviços pet, valorizando a relação entre tutores e profissionais.</p>
+        </article>
+
+        <article id="valores">
+          <h3>Nossos Valores</h3>
+          <p>Carinho, segurança, confiança e profissionalismo em cada atendimento.</p>
+        </article>
+      </div>
+
+      <aside id="sobre-aside">
+        <div id="historia">
+          <h3>Nossa História</h3>
+          <p>A ConnectPets nasceu da paixão por animais e da vontade de facilitar o acesso a profissionais capacitados. Começamos como um pequeno projeto local e crescemos com base na confiança de tutores e profissionais.</p>
+        </div>
+
+        <div id="equipe">
+          <h3>Nossa Equipe</h3>
+          <div class="team-list">
+            <div class="team-member">
+              <div class="avatar">AC</div>
+              <strong>Ana Clara</strong>
+              <div class="role">Fundadora · Cuidados</div>
+            </div>
+            <div class="team-member">
+              <div class="avatar">LM</div>
+              <strong>Lucas Martins</strong>
+              <div class="role">Operações · Parcerias</div>
+            </div>
+            <div class="team-member">
+              <div class="avatar">MA</div>
+              <strong>Mariana Alves</strong>
+              <div class="role">Suporte · Comunidade</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" aria-label="Serviços oferecidos">
+      <div id="servicos-intro">
+        <h2>Nossos Serviços</h2>
+        <p>Oferecemos uma variedade de serviços para garantir que seu pet receba atenção, cuidados e carinho quando você mais precisa.</p>
+      </div>
+
+      <div id="servicos-list" role="list" aria-live="polite">
+        <article class="servico-item" data-service="Dog Walker" tabindex="0" role="button" onclick="openServiceDetails('Dog Walker','Caminhadas regulares, atenção e socialização para seu cão.')">
+          <div class="servico-icone" aria-hidden="true">🐾</div>
+          <h3 class="servico-titulo">Dog Walker</h3>
+          <p class="servico-resumo">Caminhadas regulares para cães</p>
+        </article>
+
+        <article class="servico-item" data-service="Pet Sitter" tabindex="0" role="button" onclick="openServiceDetails('Pet Sitter','Cuidados e companhia em casa enquanto você viaja ou trabalha.')">
+          <div class="servico-icone" aria-hidden="true">🏡</div>
+          <h3 class="servico-titulo">Pet Sitter</h3>
+          <p class="servico-resumo">Cuidado e companhia em casa</p>
+        </article>
+
+        <article class="servico-item" data-service="Adestrador" tabindex="0" role="button" onclick="openServiceDetails('Adestrador','Treinamento básico e correção comportamental com métodos positivos.')">
+          <div class="servico-icone" aria-hidden="true">🎓</div>
+          <h3 class="servico-titulo">Adestrador</h3>
+          <p class="servico-resumo">Treinamento e comportamento</p>
+        </article>
+
+        <article class="servico-item" data-service="Cuidador" tabindex="0" role="button" onclick="openServiceDetails('Cuidador','Cuidados diários, alimentação e atenção especial para pets.')">
+          <div class="servico-icone" aria-hidden="true">🩺</div>
+          <h3 class="servico-titulo">Cuidador</h3>
+          <p class="servico-resumo">Cuidado e alimentação</p>
+        </article>
+
+        <article class="servico-item" data-service="Banho & Tosa" tabindex="0" role="button" onclick="openServiceDetails('Banho & Tosa','Serviço de higiene e estética para seu pet.')">
+          <div class="servico-icone" aria-hidden="true">🛁</div>
+          <h3 class="servico-titulo">Banho &amp; Tosa</h3>
+          <p class="servico-resumo">Higiene e cuidados estéticos</p>
+        </article>
+
+        <article class="servico-item" data-service="Hospedagem" tabindex="0" role="button" onclick="openServiceDetails('Hospedagem','Acolhimento do seu pet com conforto e atenção quando você se ausentar.')">
+          <div class="servico-icone" aria-hidden="true">🏨</div>
+          <h3 class="servico-titulo">Hospedagem</h3>
+          <p class="servico-resumo">Acolhimento temporário</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Modal de detalhes de serviço (invisível até abrir) -->
+    <div id="serviceModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="svcTitle">
+      <div class="modal-content">
+        <button id="modalCloseBtn" aria-label="Fechar modal" onclick="closeServiceDetails()">✕</button>
+        <div id="modal-body">
+          <div class="modal-ico" aria-hidden="true">🐶</div>
+          <h2 id="svcTitle">Serviço</h2>
+          <p id="svcDesc"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CADASTRO de Profissionais -->
+    <section id="cadastro" aria-label="Cadastro de Profissionais">
+      <div id="cadastro-intro">
+        <h2>Cadastre-se como profissional</h2>
+        <p>Preencha o formulário ao lado para que tutores possam encontrar seus serviços.</p>
+      </div>
+
+      <form id="profForm" onsubmit="return submitForm(event)" aria-label="Formulário de cadastro de profissional">
+        <div class="field">
+          <label for="nome"><strong>Nome completo</strong></label>
+          <input id="nome" name="nome" type="text" placeholder="Seu nome completo" required>
+        </div>
+
+        <div class="field">
+          <label for="cidade"><strong>Cidade</strong></label>
+          <input id="cidade" name="cidade" type="text" placeholder="Cidade onde atua" required>
+        </div>
+
+        <div class="field">
+          <label for="servico"><strong>Tipo de serviço</strong></label>
+          <select id="servico" name="servico" required>
+            <option value="">Selecione um serviço</option>
+            <option>Dog Walker</option>
+            <option>Pet Sitter</option>
+            <option>Adestrador</option>
+            <option>Cuidador</option>
+            <option>Banho & Tosa</option>
+            <option>Hospedagem</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="contato"><strong>Contato</strong></label>
+          <input id="contato" name="contato" type="text" placeholder="Telefone, WhatsApp ou e-mail" required>
+        </div>
+
+        <div class="field">
+          <label for="descricao"><strong>Descrição</strong></label>
+          <textarea id="descricao" name="descricao" placeholder="Fale um pouco sobre você e sua experiência"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" id="btnSubmit">Cadastrar</button>
+          <button type="button" id="btnFillExample" onclick="fillExample()">Preencher exemplo</button>
+        </div>
+      </form>
+
+      <aside id="cadastro-info">
+        <h3>Por que se cadastrar?</h3>
+        <ul>
+          <li>Apareça para tutores próximos da sua cidade</li>
+          <li>Ganhe visibilidade e contatos diretos</li>
+          <li>Construa sua reputação com avaliações (em futuras versões)</li>
+        </ul>
+        <p>Cadastro gratuito e rápido — mantenha seus dados atualizados.</p>
+      </aside>
+    </section>
+
+    <!-- LISTA de Profissionais -->
+    <section id="lista" aria-label="Lista de Profissionais">
+      <h2>Profissionais Cadastrados</h2>
+      <p>Use os filtros para encontrar o profissional ideal por cidade ou serviço.</p>
+
+      <div id="filters">
+        <input id="filterCity" type="text" placeholder="Filtrar por cidade" aria-label="Filtrar por cidade">
+        <select id="filterService" aria-label="Filtrar por serviço">
+          <option value="">Filtrar por serviço</option>
+          <option>Dog Walker</option>
+          <option>Pet Sitter</option>
+          <option>Adestrador</option>
+          <option>Cuidador</option>
+          <option>Banho & Tosa</option>
+          <option>Hospedagem</option>
+        </select>
+        <button type="button" id="clearFiltersBtn" onclick="clearFilters()">Limpar filtros</button>
+      </div>
+
+      <div id="listContainer" aria-live="polite" aria-label="Lista de profissionais"></div>
+      <div id="emptyNotice" class="empty" style="display:none">Nenhum profissional encontrado. Cadastre-se ou tente outros filtros.</div>
+    </section>
+
+    <footer id="rodape" aria-label="Rodapé">
+      <small>© ConnectPets — Conectando tutores e profissionais.</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+ <script>
+const hamb = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+
+hamb.addEventListener("click", () => {
+  mobileMenu.classList.toggle("show");
+});
+</script>
+
+
+</body>
+</html>
